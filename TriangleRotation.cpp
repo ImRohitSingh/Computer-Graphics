@@ -6,7 +6,7 @@
 #define fx(x) (getmaxx()/2+x)    
 #define fy(y) (getmaxy()/2-y)
 
-// pre-processor directories to calculate the round-off value to the nearest integer
+// pre-processor directory to calculate the round-off value to the nearest integer
 #define R(x) ((int)(x+0.5))
 
 // required constants
