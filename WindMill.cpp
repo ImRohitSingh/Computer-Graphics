@@ -24,7 +24,7 @@ void drawMillStand(int,int);   // function prototype to draw the trunk of the mi
 void drawBlade(int,int,int,int,int,int,int); // function prototype to draw a blade of the mill
 void calRotate(int,int,int,int,int,int,int);   // function prototype to draw a blade by calculating the new co-ordinates after a rotation
 void createWindMill();    // function prototype to create a windmill
-void createStill(int,int,int,int,int,int,int);  // function prototype to create a stationary image of a windmill
+
 
 int main(void)
 /* 
@@ -48,6 +48,7 @@ int main(void)
              cleardevice() - to delete evrything from the window at a particular instant
              delay() - to hold the current state for a particular time
           User-defined functions:
+             drawMillStand() -  to draw the trunk of the mill.
              drawBlade() - to draw a blade of the mill.
              calRotate() - to calculate new co-ordinates and after a rotation and draw the rotated triangle accordingly.
              createWindMill()- to create a windmill.
@@ -126,6 +127,8 @@ void createWindMill()
          increment+=5;
      }     
 }
+
+
 
 
 
