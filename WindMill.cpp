@@ -46,6 +46,7 @@ int main(void)
              line() - to draw a line.
              kbhit() - to stop the program by pressing any key. If a key has been pressed then it returns a non-zero value, otherwise a zero.
              cleardevice() - to delete evrything from the window at a particular instant
+             delay() - to hold the current state for a particular time
           User-defined functions:
              drawBlade() - to draw a blade of the mill.
              calRotate() - to calculate new co-ordinates and after a rotation and draw the rotated triangle accordingly.
@@ -113,7 +114,7 @@ void createWindMill()
      int x1=10,y1=10,x2=x1+50,y2=y1-35,x3=x1-25,y3=y1-63,a=240,speed=10,increment=10;
      while(!(kbhit()))    
      {
-         delay(speed);
+         delay(speed);  // holding the present state for 'speed' milliseconds
          cleardevice(); // clear the window
          // each itertion of these steps draws a stationary windmill
          drawMillStand(x1,y1); // calling function to draw the trunk of the mill
@@ -125,5 +126,8 @@ void createWindMill()
          increment+=5;
      }     
 }
+
+
+
 
 
