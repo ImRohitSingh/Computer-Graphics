@@ -78,9 +78,9 @@ int main(void)
     initwindow(X,Y);     // creating window
     drawQuadrants(); // calling function to draw quadrants 
     circleMidPointApp(x1,y1,r);   // function call to draw a circle through Mid-Point Approach
-    boundaryFill(x1,y1,LWHITE,IMAGENTA);
+    boundaryFill(x1,y1,LWHITE,IMAGENTA);     // function call to paint the circle using Boundary Fill Approach
     delay(100);      // holding the present state for '100' milliseconds
-    floodFill(x1,y1,IMAGENTA,YELLOW);
+    floodFill(x1,y1,IMAGENTA,YELLOW);      // function call to paint the circle using Flood Fill Approach
     getch();
     return 0;
 }  // end of main
