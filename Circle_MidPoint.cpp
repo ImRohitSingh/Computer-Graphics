@@ -29,7 +29,7 @@ int main(void)
             'd' is the decision parameter
             'speed' is basically the time(in milliseconds) for which a delay will be applied
    
-            Note: Variables x1,y1, and r are initialized from before in this piece of code. To avoid any loss of generality, take user-inputs.
+            Note: Variables 'x1','y1','r' and 'speed' are initialized from before in this piece of code. To avoid any loss of generality, take user-inputs.
    
    Functions used:-
           Pre-defined functions:   
