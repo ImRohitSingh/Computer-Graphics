@@ -5,8 +5,6 @@
 #define fx(x) (getmaxx()/2+x)    
 #define fy(y) (getmaxy()/2-y)
 
-#define PV(x) ((int)(x+0.5)) /*macro used for scan conversion of point, 
-                            addressing a pixel by its centre point*/
 // required constants
 #define X 640
 #define Y 480
@@ -15,7 +13,7 @@
 #define LCYAN 3
 
 void drawQuadrants();   // function prototype to create quadrants
-void circleMidPointApp(int,int,double); // function prototype to draw a circle through Mid-Point Approach
+void circleMidPointApp(int,int,int); // function prototype to draw a circle through Mid-Point Approach
 void paint(int,int,int,int);   // function prototype to plot 8 different points of a circle at once at a time
 
 
@@ -55,8 +53,7 @@ int main(void)
 */
 {
     // declaring and initializing variables
-    int x1=56,y1=-67;
-    double r=50;
+    int x1=0,y1=0,r=150;
     initwindow(X,Y);     // creating window
     drawQuadrants(); // calling function to draw quadrants 
     circleMidPointApp(x1,y1,r);   // function call to draw a circle through Mid-Point Approach
@@ -73,21 +70,21 @@ void drawQuadrants()
 }
 
 // function definition to draw a circle through Mid-Point Approach
-void circleMidPointApp(int x1,int y1,double r)
+void circleMidPointApp(int x1,int y1,int r)
 {
      // declaring and initializing variables
-     int x=0,y,speed=50;
-     double d;
-     y=PV(r);
-     d=PV(1-r);
+     int x=0,y,speed=50,d;
+     y=r;
+     d=1-r;
      // applying Mid-point algorithm
-     while(x<y)
+     while(x!=y)
      {          
+              paint(x1,y1,x,y);    // function call to plot 8 different points of a circle at once at a time
               if(d<0)  // if decision variable is negative, E corner
-                  d=PV(d+(2*x)+3);
+                  d=d+(2*x)+3;
               else   // if decision variable is non-negative, SE corner
               {
-                  d=PV(d+(2*(x-y))+5);
+                  d=d+(2*(x-y))+5;
                   y=y-1;
               }
               x=x+1; 
