@@ -77,7 +77,7 @@ void circleMidPointApp(int x1,int y1,int r)
      y=r;
      d=1-r;
      // applying Mid-point algorithm
-     while(x!=y)
+     while(x<=y)
      {          
               paint(x1,y1,x,y);    // function call to plot 8 different points of a circle at once at a time
               if(d<0)  // if decision variable is negative, E corner
@@ -88,7 +88,6 @@ void circleMidPointApp(int x1,int y1,int r)
                   y=y-1;
               }
               x=x+1; 
-              paint(x1,y1,x,y);    // function call to plot 8 different points of a circle at once at a time
               delay(speed);    // holding the present state for 'speed' milliseconds
      }
 }
