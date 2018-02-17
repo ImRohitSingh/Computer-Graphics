@@ -1,4 +1,4 @@
-// Boundary Fill and Flood Fill using Midpoint-Approach
+// Boundary Fill and Flood Fill technique appied on a Circle drawn using Midpoint-Algorithm
 #include<stdio.h>
 #include<graphics.h>
 #include<conio.h>
