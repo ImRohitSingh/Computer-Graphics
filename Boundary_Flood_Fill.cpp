@@ -1,4 +1,4 @@
-// Boundary Fill 
+// Boundary Fill Flood Fill
 #include<stdio.h>
 #include<graphics.h>
 #include<conio.h>
@@ -74,13 +74,13 @@ int main(void)
 */
 {
     // declaring and initializing variables
-    int x1=56,y1=-67,r=100;
+    int x1=0,y1=0,r=100;
     initwindow(X,Y);     // creating window
     drawQuadrants(); // calling function to draw quadrants 
     circleMidPointApp(x1,y1,r);   // function call to draw a circle through Mid-Point Approach
-    boundaryFill(x1,y1,LWHITE,IMAGENTA);     // function call to paint the circle using Boundary Fill Approach
+    boundaryFill(x1,y1,LWHITE,IMAGENTA);
     delay(100);      // holding the present state for '100' milliseconds
-    floodFill(x1,y1,IMAGENTA,YELLOW);      // function call to paint the circle using Flood Fill Approach
+    floodFill(x1,y1,IMAGENTA,YELLOW);
     getch();
     return 0;
 }  // end of main
@@ -101,7 +101,7 @@ void circleMidPointApp(int x1,int y1,int r)
      y=r;
      d=1-r;
      // applying Mid-point algorithm
-     while(y>x)
+     while(x<=y)
      {          
               paint(x1,y1,x,y);    // function call to plot 8 different points of a circle at once at a time
               if(d<0)  // if decision variable is negative, E corner
@@ -112,7 +112,6 @@ void circleMidPointApp(int x1,int y1,int r)
                   y=y-1;
               }
               x=x+1; 
-              paint(x1,y1,x,y);    // function call to plot 8 different points of a circle at once at a time
               delay(speed);    // holding the present state for 'speed' milliseconds
      }
 }
