@@ -1,4 +1,4 @@
-// Boundary Fill Flood Fill
+// Boundary Fill and Flood Fill using Midpoint-Approach
 #include<stdio.h>
 #include<graphics.h>
 #include<conio.h>
@@ -74,13 +74,13 @@ int main(void)
 */
 {
     // declaring and initializing variables
-    int x1=0,y1=0,r=100;
+    int x1=56,y1=-67,r=100;
     initwindow(X,Y);     // creating window
     drawQuadrants(); // calling function to draw quadrants 
     circleMidPointApp(x1,y1,r);   // function call to draw a circle through Mid-Point Approach
-    boundaryFill(x1,y1,LWHITE,IMAGENTA);
+    boundaryFill(x1,y1,LWHITE,IMAGENTA);    // function call to color the circle using Boundary-Fill Technique
     delay(100);      // holding the present state for '100' milliseconds
-    floodFill(x1,y1,IMAGENTA,YELLOW);
+    floodFill(x1,y1,IMAGENTA,YELLOW);    // function call to color the circle Flood-Fill Technique
     getch();
     return 0;
 }  // end of main
