@@ -88,7 +88,7 @@ void ellipseMidPointApp(int x1,int y1,int a,int b)
      // applying Mid-point algorithm
      while(R(((a*a)*(y-0.5)))>((b*b)*(x+1)))
      {          
-              paint(x1,y1,x,y);    // function call to plot 4 different points of an ellipse at once at a time 
+              paint(x1,y1,x,y);    // function call to plot 4 different points of an ellipse at once
               if(d<0)  // if decision variable is negative, E corner
                   d=d+(b*b)*((2*x)+3);
               else   // if decision variable is non-negative, SE corner
@@ -116,7 +116,7 @@ void ellipseMidPointApp(int x1,int y1,int a,int b)
      paint(x1,y1,x,y);    // function call to plot 4 different points of an ellipse at once; this call plots the points (x1+a,y1) and (x1-a,y1).
 }
 
-// function definition to plot 4 different points of an ellipse at once at a time
+// function definition to plot 4 different points of an ellipse at once
 void paint(int x1,int y1,int x,int y)
 {
      // first quadrant
