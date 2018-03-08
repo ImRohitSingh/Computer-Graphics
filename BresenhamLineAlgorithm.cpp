@@ -29,7 +29,6 @@ int main(void)
    Functions Description:-
              Predefined:
                   initwindow()- to create the displaying window
-                  putpixel()- to draw a particular pixel with a particular color
                   getch()- to hold the console till a button is pressed
              User-defined:
                   drawQuadrants()- to draw quadrants
