@@ -109,7 +109,7 @@ void lineDDA(int x1,int y1,int x2,int y2,int color)
           } 
           putpixel(R(x),R(y),color);
      } 
-     else if(abs(y2-y1)<abs(x2-x1))  // |m|<=1, i.e., gentle slope
+     else if(abs(y2-y1)<abs(x2-x1))  // |m|<1, i.e., gentle slope
      {
           m=(y2-y1)/((double)(x2-x1));  // calculate slope
           if(x1<x2)  // left to right
@@ -132,7 +132,7 @@ void lineDDA(int x1,int y1,int x2,int y2,int color)
           } 
           putpixel(R(x),R(y),color);  // plot the pixel with color 'color'
      }
-     else  // |m|>1 i.e. sharp slope.
+     else  // |m|>=1 i.e. sharp slope.
      {
          m=(x2-x1)/((double)(y2-y1));  // calculate inverse of slope
          if(y1<y2)  // bottom to top 
