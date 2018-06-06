@@ -20,7 +20,7 @@
    Functions Description:-
              Predefined:
                   initwindow()- to create the displaying window
-                  putpixel()- to draw a particular pixel with a particular color
+                  circle()- to mark the end points
                   getch()- to hold the console till a button is pressed
              User-defined:
                   lineBresenham()- to draw a straight line using Bresenham's algorithm
