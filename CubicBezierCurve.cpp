@@ -87,8 +87,8 @@ void bezier(S inp,int pointCol,int curveCol)
              xold- abscissa of the previous point on the curve
              yold- ordinate of the previous point on the curve
                    [ draw a line from (xold,yold) to (xt,yt) (or vice-versa) after each iteration... ]
-                       [ putpixel() will be less efficient and the error term may as well needs to be further reduced thus increasing
-                              the iterations... ]
+                       [ putpixel() will be less efficient and the choice of the error term 'error' will increase 
+                                the number of iterations and thus has to be manipulated... ]
              i- loop initializer
              
    Functions Description:-
