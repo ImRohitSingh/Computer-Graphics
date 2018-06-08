@@ -108,7 +108,6 @@ void bezier(S inp,int pointCol,int curveCol)
     for(i=0;i<4;++i)
     {
       circle(inp.x[i],inp.y[i],3);  // marking the control points with circles
-      //putpixel(inp.x[i],inp.y[i],8);
     }
     t=0.0;  // initialize parameter
     setlinestyle(0,0,0);  // reassign the thickness of the lines to be drawn
